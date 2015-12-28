@@ -1,9 +1,10 @@
 var cheerio = require('cheerio');
 var gameObj = require('./game');
+var database = require('./database');
 
 module.exports = {
 
-		getGame: function (html) {
+		getGame: function (html, con) {
 
 			var $ = cheerio.load(html);
 			var game = "";
@@ -14,7 +15,7 @@ module.exports = {
 
 				if (data.toString().indexOf("Game Thread") > -1){
 
-					game = getData(data);
+					game = getData(con, data);
 
 					console.log(data.text());
 
@@ -29,7 +30,7 @@ module.exports = {
 		}
 	}
 
-var getData = function(data){
+var getData = function(con, data){
 
 	var game = gameObj();
 	var dataText = data.text().split(' ');
@@ -37,6 +38,9 @@ var getData = function(data){
 	game.homeTeam = dataText[2];
 	game.awayTeam = dataText[4];
 	game.threadURL = data.attr('href');
+
+	game.homeLogo = database.getLogo(con, game.homeTeam);
+	game.awayLogo = database.getLogo(con, game.awayTeam);
 
 	return game;
 
