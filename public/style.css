@@ -15,13 +15,18 @@ table {
   
 }
 
+#home, #away{
 
+max-width: 100%;
+padding-top: 20px;
+padding-bottom: 20px;
+height: auto;
 
+}
 #home {
 
 float:right;
 padding-right:20%;
-
 
 }
 
@@ -32,15 +37,14 @@ padding-left:20%;
 
 }
 
-
 tr:hover {background-color: #B0B0B0}
 
 img {
 
   height: auto;
-  width:100%;
-  min-width: 30%;
+  max-width: 70%;
   
 }
+
 
 

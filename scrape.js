@@ -1,6 +1,5 @@
 var cheerio = require('cheerio');
 var gameObj = require('./game');
-var database = require('./database');
 var logo = require('./logo');
 
 module.exports = {
