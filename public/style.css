@@ -1,52 +1,46 @@
-/* Initial body */
+
 body {
-  left: 0;
-  margin: 0;
-  overflow: hidden;
-  position: relative;
+
+  margin:0;
 }
 
-/* Initial menu */
-.menu {
-  background: #202024 url('http://s3.amazonaws.com/codecademy-content/courses/ltp2/img/uber/black-thread.png') repeat left top;
-  height: 100%;
-  position: fixed;
-  width: 285px;
-}
-
-/* Basic styling */
-
-.jumbotron {
-
-  height: 100%;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
+table {
+  
+  border-collapse: collapse;
+  font-family: "Verdana";
+  text-align: center;
+  margin-right: auto;
+  margin-left:auto;
+  width: 100%;
+  
 }
 
 
 
-.menu ul {
-  border-top: 1px solid #636366;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+#home {
+
+float:right;
+padding-right:20%;
+
+
 }
 
-.menu li {
-  border-bottom: 1px solid #636366;
-  font-family: 'Open Sans', sans-serif;
-  line-height: 45px;
-  padding-bottom: 3px;
-  padding-left: 20px;
-  padding-top: 3px;
+#away {
+
+float:left;
+padding-left:20%;
+
 }
 
-.menu a {
-  color: #fff;
-  font-size: 15px;
-  text-decoration: none;
-  text-transform: uppercase;
+
+tr:hover {background-color: #B0B0B0}
+
+img {
+
+  height: auto;
+  width:100%;
+  min-width: 30%;
+  
 }
+
 
